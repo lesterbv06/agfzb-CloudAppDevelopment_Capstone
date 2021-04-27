@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+    <body>
+        <div class="container">
+            <h1 style="margin: 1em 0 1em 0 ;">Contact Us</h1>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="contactName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="contactName" placeholder="name" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="contactEmail" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="contactEmail" placeholder="myemail@example.com" required>
+                </div>
+                <div class="col-md-6" style="margin-top: 1em;">
+                    <label for="contactComments" class="form-label">Comments</label>
+                    <textarea class="form-control" id="contactComments"placeholder="your comments here..." required></textarea>
+                </div>
+                <div class="col-12" style="margin-top: 1em;">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+                </form> 
+        </div>
+    </body>
+
+</html>
