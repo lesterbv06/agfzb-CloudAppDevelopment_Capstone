@@ -8,6 +8,18 @@
 </head>
 
     <body>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <p style="font-size: 1.25rem;">Dealership Review</p>
+                </div>
+                <ul class="nav navbar-right">
+                    <li>
+                        <a class="btn btn-primary"  href="{% url 'djangoapp:index' %}">Return</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <div class="container">
             <h1 style="margin: 1em 0 1em 0 ;">Contact Us</h1>
             <form class="row g-3 needs-validation" novalidate>
@@ -24,7 +36,7 @@
                     <textarea class="form-control" id="contactComments"placeholder="your comments here..." required></textarea>
                 </div>
                 <div class="col-12" style="margin-top: 1em;">
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                   <a class="btn btn-primary" href="#" role="button">Submit</a>
                 </div>
                 </form> 
         </div>

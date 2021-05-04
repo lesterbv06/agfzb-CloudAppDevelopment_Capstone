@@ -6,7 +6,6 @@ from requests.auth import HTTPBasicAuth
 
 # Create a `get_request` to make HTTP GET requests
 def get_request(url, **kwargs):
-    print(kwargs)
     print("GET from {} ".format(url))
     try:
         # Call get method of requests library with URL and parameters
@@ -29,7 +28,6 @@ def get_dealers_from_cf(url, **kwargs):
     results = []
     # Call get_request with a URL parameter
     json_result = get_request(url)
-    print('=>Aqui: ', json_result)
     if json_result:
         # Get the row list in JSON as dealers
         dealers = json_result['entries']
@@ -46,7 +44,7 @@ def get_dealers_from_cf(url, **kwargs):
 
 
 # Create a get_dealer_reviews_from_cf method to get reviews by dealer id from a cloud function
-def get_dealer_reviews_by_id_from_cf(url, dealerId):
+def get_dealer_reviews_from_cf(url, dealerId):
     results = []
     json_result = get_request(url, dealerId=dealerId)
     if json_result:
